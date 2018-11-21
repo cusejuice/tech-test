@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+	<header>
+
+		<div class="hamburger"><i id="hamburger" class="fas fa-bars"></i></div>
+
+		<nav class="navigation">
+			<ul>
+				<li class="dropdown">
+					Teams <i class="fas fa-angle-down"></i>
+					<div class="sports">
+						<ul>
+							<li>Men's Sports</li>
+							<li>Baseball</li>
+							<li>Basketball</li>
+							<li>Cross Country</li>
+						</ul>
+						<ul>
+							<li>Women's Sports</li>
+							<li>Baseball</li>
+							<li>Basketball</li>
+						</ul>
+					</div>
+				</li>
+				<li>Tickets</li>
+				<li>Patriot Club</li>
+				<li>Inside Athletics</li>
+				<li>Fan Central</li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			$(function() {
+				$('header .hamburger').click(function() {
+					$('#hamburger').toggleClass('fa-bars');
+					$('#hamburger').toggleClass('fa-times');
+					$('.navigation').toggleClass('open');
+				});
+
+				$('.dropdown').click(function(){
+					$('.sports').toggleClass('open-lvl-2');
+					$('.dropdown i').toggleClass('fa-angle-down');
+					$('.dropdown i').toggleClass('fa-angle-up');
+				});
+			});
+
+
+
+		</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/*reset*/
+html, body{margin: 0; padding: 0;}
+ul{list-style: none; padding-left: 0;}
+
+
+
+
+/*site css*/
+header{background: #046a38; width: 100%; border: #f2a900 solid; border-width: 5px 0 5px 0; position: relative;}
+
+nav > ul{background: #046a38; max-width: 1300px;display: flex; flex-direction: row; justify-content: space-around; align-items: stretch; margin:0 auto; z-index: 1;}
+nav > ul li{font-family: Roboto; font-size: 20px; font-weight: bold; color: #fff; text-transform: uppercase; line-height: 80px; flex:1; text-align: center;}
+nav > ul > li:hover {background: #f2a900; cursor: pointer;}
+
+.dropdown .sports{position: absolute; left: -9999999px; width: 100%; color: black; display: flex; flex-direction: row; background: #fff; width: 100%; padding-top: 50px; cursor: default;}
+.dropdown .sports{display: flex; flex-direction: row; width: 100%;}
+.dropdown:hover .sports{left:0; top: 80px; max-width: none;}
+
+.sports ul {width: 46%; text-align: left; line-height: 40px; padding-left: 40px;}
+.sports ul li{border-bottom: 1px solid #bbb; font-size: 16px; text-align: left; line-height: 50px;}
+.dropdown .sports ul li:first-of-type{color: #046a38; font-weight: bold; font-size: 20px; cursor: default;}
+.dropdown .sports ul li{color: #777; font-weight: bold; cursor: pointer;}
+
+.hamburger, .dropdown i{display: none;}
+
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1024px)
+{
+	header {width: 100%; display: flex; justify-content: flex-end; flex-direction: row;}
+	header .hamburger{line-height: 40px; display: block; padding: 20px; border-left: 1px solid #000; color: white; font-size: 30px;}
+	header .hamburger:hover{cursor: pointer;}
+	.hamburger i {width: 26.5px;}
+
+	nav {margin: 0; display: initial;}
+	.navigation {position:fixed; right:-300px; width: 300px; transform: translateX(100%); transition: all .5s ease; background: #046a38; top: 90px; height:calc(100vh - 80px);}
+	.navigation.open{left: auto; right: 0; transform: translateX(0); transition: all .5s ease;}
+	.navigation > ul {display: block;}
+	.navigation > ul > li {border-bottom:1px solid #000; text-align: left; padding-left: 20px; line-height: 50px;}
+
+	.dropdown:hover .sports, .dropdown:hover .sports.open-lvl-2{display: none;}
+
+	.sports ul{width: 100%; padding: 0;}
+	.dropdown .sports.open-lvl-2{display: block!important; position: relative; top: 0; left: -20px; padding: 0;}
+	.sports.open-lvl-2 ul li:first-of-type{color: #f2a900; font-style: italic;}
+	.sports.open-lvl-2 ul li{color: #fff; background: #013019; width: 300px; border-bottom:1px dotted #046a38; padding-left: 10px; font-weight: normal;}
+
+	.dropdown i{padding-left: 165px; display: inline;}
+	
+}
