@@ -28,7 +28,6 @@ nav > ul > li:hover {background: #f2a900; cursor: pointer;}
 
 
 /* Media Queries */
-
 @media screen and (max-width: 1024px)
 {
 	header {width: 100%; display: flex; justify-content: flex-end; flex-direction: row;}
